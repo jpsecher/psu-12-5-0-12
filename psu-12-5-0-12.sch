@@ -31,7 +31,7 @@ U 1 1 5C3A759D
 P 2350 3200
 F 0 "D1" H 2500 3025 50  0000 L CNN
 F 1 "-AA+" H 2225 3225 50  0000 L CNN
-F 2 "Diode_THT:Diode_Bridge_Vishay_KBU" H 2350 3200 50  0001 C CNN
+F 2 "Diode_THT:Diode_Bridge_32.0x5.6x17.0mm_P10.0mm_P7.5mm" H 2350 3200 50  0001 C CNN
 F 3 "~" H 2350 3200 50  0001 C CNN
 	1    2350 3200
 	1    0    0    -1  
@@ -180,17 +180,6 @@ F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/c9/16/8
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R1
-U 1 1 5C3A8191
-P 1775 3000
-F 0 "R1" V 1875 3000 50  0000 C CNN
-F 1 "0Ω1" V 1775 3000 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-126-2_Vertical" V 1705 3000 50  0001 C CNN
-F 3 "~" H 1775 3000 50  0001 C CNN
-	1    1775 3000
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:D_Schottky D5
 U 1 1 5C3A82BE
 P 4950 3550
@@ -226,8 +215,6 @@ $EndComp
 Wire Wire Line
 	1600 3100 1600 3500
 Wire Wire Line
-	1600 3000 1625 3000
-Wire Wire Line
 	2650 3200 2650 2900
 Wire Wire Line
 	2650 2900 2850 2900
@@ -256,8 +243,6 @@ Wire Wire Line
 Connection ~ 2850 3750
 Wire Wire Line
 	3200 3400 3200 3325
-Wire Wire Line
-	1925 3000 1950 3000
 Wire Wire Line
 	1950 3000 1950 3325
 Wire Wire Line
@@ -356,14 +341,12 @@ L Connector:Screw_Terminal_01x04 J2
 U 1 1 5C3B312D
 P 6950 3000
 F 0 "J2" H 7029 2992 50  0000 L CNN
-F 1 "12/5/0/-12VDC" H 7029 2901 50  0000 L CNN
+F 1 "5/12/0/-12VDC" H 7029 2901 50  0000 L CNN
 F 2 "TerminalBlock:TerminalBlock_bornier-4_P5.08mm" H 6950 3000 50  0001 C CNN
 F 3 "~" H 6950 3000 50  0001 C CNN
 	1    6950 3000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4950 2900 6750 2900
 Wire Wire Line
 	4950 3750 6750 3750
 Wire Wire Line
@@ -371,10 +354,6 @@ Wire Wire Line
 Connection ~ 4950 3750
 Wire Wire Line
 	6450 2500 6650 2500
-Wire Wire Line
-	6650 2500 6650 3000
-Wire Wire Line
-	6650 3000 6750 3000
 Connection ~ 6450 2500
 Wire Wire Line
 	6450 3325 6650 3325
@@ -435,4 +414,24 @@ F 3 "~" H 5450 2500 50  0001 C CNN
 	1    5450 2500
 	1    0    0    -1  
 $EndComp
+Text Label 1950 3000 0    50   ~ 0
+GND
+Text Label 4550 2900 0    50   ~ 0
++12V
+Text Label 4550 3750 0    50   ~ 0
+-12V
+Text Label 6450 2500 0    50   ~ 0
++5V
+Wire Wire Line
+	1600 3000 1950 3000
+Wire Wire Line
+	6650 2500 6650 2900
+Wire Wire Line
+	6650 2900 6750 2900
+Wire Wire Line
+	4950 2900 6550 2900
+Wire Wire Line
+	6550 2900 6550 3000
+Wire Wire Line
+	6550 3000 6750 3000
 $EndSCHEMATC
